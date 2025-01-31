@@ -50,8 +50,8 @@ Feel free to submit issues and pull requests if you have any improvements or fea
 This project is licensed under the **MIT License**.
 
 ## 📬 Contact
-📧 **Email:** example@gmail.com  
-👨‍💻 **Developer:** [Your Name]  
+📧 **Email:** mohammad.mousavi3j@gmail.com  
+👨‍💻 **Developer:** [mohammadMSV]  
 
 💙 _Happy Coding & Have Fun!_ 🎉
 
