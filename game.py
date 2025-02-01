@@ -1,15 +1,18 @@
 import random
 
 def mainProject():
+    """Main function to start the project by calling the menu."""
     menuProject()
 
 def menuProject():
+    """Displays the main menu options and prompts user input."""
     print("---------------------------------------------------------")
     print("|", "1.Start\t", "2.Help\t\t", "3.About US\t", "4.Exit", "|")
     print("----------------------------------------------------")
     inputProject()
 
 def inputProject():
+    """Handles user input for menu selection and calls the corresponding function."""
     choiceClonte = input("Enter your choice : ")
     if choiceClonte == "1":
         startProject()
@@ -24,8 +27,10 @@ def inputProject():
         menuProject()
 
 def startProject():
+    """Starts the 'Guess Vocab Game' by randomly selecting and obscuring words for the user to guess."""
     print("\nWelcome to Guess Vocab Game\n")
-    
+
+    # List of animal names used in the game
     animal_list = ['Dog', 'Cow', 'Cat', 'Horse', 'Donkey', 'Tiger', 'Lion', 'Leopard',
     'Cheetah', 'Bear', 'Elephant', 'Polar', 'Turtle', 'Crocodile', 'Rabbit', 'Hen', 'Pigeon',
     'Crow', 'Fish', 'Dolphin', 'Frog', 'Whale', 'Alligator', 'Eagle', 'Squirrel', 'Ostrich',
@@ -33,12 +38,12 @@ def startProject():
     'Giraffe', 'Bat', 'Panda', 'Shark', 'Camel', 'Sheep', 'Rat', 'Snake', 'Raccoon',
     'Jellyfish', 'Chameleon', 'Otter', 'Peacock', 'Boar', 'Zebra', 'Flamingo']
     
-    random.shuffle(animal_list)
+    random.shuffle(animal_list) # Shuffle the list for randomness
     selected_animals = random.sample(animal_list, min(20, len(animal_list)))
-    score = 0
+    score = 0   # Initialize player score
     
     for word in selected_animals:
-        hidden_word = list(word)
+        hidden_word = list(word)    # Convert word to list for modification
         length = len(word)
         num_spaces = 2 if length <= 5 else 3  # Determine number of missing letters
         indices = random.sample(range(length), num_spaces)  # Select random positions
